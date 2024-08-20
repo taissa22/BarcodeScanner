@@ -1,3 +1,4 @@
+import 'package:barcode_recognizer/camera/capture_button.dart';
 import 'package:flutter/material.dart';
 import 'package:barcode_recognizer/camera/camera_viewer.dart';
 
@@ -11,6 +12,7 @@ class CameraScreen extends StatelessWidget {
       alignment: Alignment.center,
       children: const [
         CameraViewer(),
+        CaptureButton(),
     ],
     );
   }
