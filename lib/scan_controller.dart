@@ -22,13 +22,7 @@ class ScanController extends GetxController {
   Future<void> _initTensorFlow() async {
     String? res = await Tflite.loadModel(
         model: "model/ssd_mobilenet.tflite",
-        labels: "model/ssd_mobilenet.txt",
-        numThreads: 1, // defaults to 1
-        isAsset:
-            true, // defaults to true, set to false to load resources outside assets
-        useGpuDelegate:
-            false // defaults to false, set to true to use GPU delegate
-        );
+        labels: "model/ssd_mobilenet.txt");
     print("model:");
     print(res);
   }
